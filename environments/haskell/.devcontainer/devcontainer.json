@@ -1,0 +1,30 @@
+{
+  "name": "DevContainer for Haskell (GHC, Cabal, HIE, LSP, DAP, etc.)",
+  "remoteUser": "vscode",
+  "build": {
+    "context": "..",
+    "dockerfile": "Dockerfile"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "haskell.haskell",
+        "sjurmillidahl.ormolu-vscode",
+        "phoityne.phoityne-vscode"
+      ],
+      "settings": {
+        "haskell.formattingProvider": "ormolu",
+        "haskell.checkParents": "CheckOnSave",
+        "haskell.manageHLS": "GHCup"
+      }
+    }
+  }
+  // "mounts": [
+  //   {
+  //     // TODO: make path relative
+  //     "source": "${localEnv:HOME}${localEnv:USERPROFILE}/personal/leetcode/problems",
+  //     "target": "${containerWorkspaceFolder}/problems",
+  //     "type": "bind"
+  //   }
+  // ]
+}
